@@ -89,15 +89,15 @@ class API:
 		return data
 
         def search (self, query, category=None, region=None):
-                p = {}
-                p['q'] = query
+                params = {}
+                params['q'] = query
 
                 # Category Group
                 if (category):
-	                p['cg'] = category
+	                params['cg'] = category
 
                 # Caller
                 if (region):
-                        p['ca'] = region
+                        params['ca'] = region
 
-                return self.perform_request(self.url_search, p)
+                return self.perform_request(self.url_search, params)
