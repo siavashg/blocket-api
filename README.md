@@ -7,6 +7,7 @@ Install:
 	python setup.py install
 
 Basic usage:
+
 	import blocket
 
 	b = blocket.API(app_id, api_key)
