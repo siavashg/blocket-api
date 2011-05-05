@@ -9,7 +9,7 @@ Install:
 Basic usage:
 	import blocket
 
-        b = blocket.API(app_id, api_key)
-        results = b.search("volvo")
+	b = blocket.API(app_id, api_key)
+	results = b.search("volvo")
 	for ad in results['ads']:
-        	print ad['subject']	
+		print ad['subject']	
