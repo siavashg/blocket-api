@@ -46,7 +46,7 @@ class API:
 		self.api_key = api_key
 
 	def parse_response(self, response):
-                data = json.loads(response)
+		data = json.loads(response)
 		return data
 
 	def generate_hash(self):
@@ -88,16 +88,16 @@ class API:
 
 		return data
 
-        def search (self, query, category=None, region=None):
-                params = {}
-                params['q'] = query
+	def search (self, query, category=None, region=None):
+		params = {}
+		params['q'] = query
 
-                # Category Group
-                if (category):
-	                params['cg'] = category
+		# Category Group
+		if (category):
+			params['cg'] = category
 
-                # Caller
-                if (region):
-                        params['ca'] = region
+		# Caller
+		if (region):
+						params['ca'] = region
 
-                return self.perform_request(self.url_search, params)
+		return self.perform_request(self.url_search, params)
